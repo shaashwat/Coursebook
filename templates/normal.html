@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>normal</title>
+</head>
+<body>
+    <form method="POST" action="" style= text-align:center;>
+         {% csrf_token %}
+         {{ form.as_p }}
+        <input type="text" name="course" placeholder="Enter a course here..." autocomplete="on" value="" style=width:800px;height:50px;font-size:20px;background-color:gold;color:navy><br>
+        <input type="submit" value="Does this course exist?" style="background-color: gold;color: navy">
+    </form>
+</body>
+</html>
