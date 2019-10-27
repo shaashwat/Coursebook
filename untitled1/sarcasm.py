@@ -86,13 +86,13 @@ def getAverageSentiment(prof):
     else:
         sum = 0
         counter = 0
-        if len(comments) < 15:
+        if len(comments) < 6:
             for comment in comments:
                 sum += (getCommentSentiment(comment)[0][0])
                 print(counter)
                 counter += 1
         else:
-            for i in range(15):
+            for i in range(6):
                 sum += (getCommentSentiment(comments[i])[0][0])
                 print(counter)
                 counter += 1

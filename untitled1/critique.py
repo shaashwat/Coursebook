@@ -69,5 +69,4 @@ def getcoursecritique(course):
 
 
 
-
-    return (" " + formatted_name + " is the professor who's class had the highest average GPA, which was " + str(next(iter(gpas)))), profname, proflist[0:4], gpalist[0:4], scorelist[0:4]
+    return (" " + formatted_name + " is the professor who's class had the highest average GPA, which was " + str(next(iter(gpas)))), profname, proflist[0:4], gpalist[0:4], scorelist[0:4], sum(gpalist)/len(gpalist)

@@ -1,0 +1,178 @@
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/static/CoursePage.css">
+        <meta charset="UTF-8">
+    </head>
+    <header>
+        <div class="grid-bar">
+            <div class="grid-back">
+                <form method="GET" action="" style= text-align:center;>
+                    <input type="submit" name="back" value="back" style=width:80px;height:50px;font-size:20px;background:url("/static/icon.png")>
+                </form>
+            </div>
+            <div class="grid-name">
+                CourseBook:
+            </div>
+            <div class="grid-course"> 
+                {{course}}
+            </div>
+            <div class="grid-by"> 
+                    created by SPAM
+            </div>
+        </div>
+    </header>
+    <body style="background-color:#DADEF7" class="opening">
+        <div class="bigcontainer">
+            <div class="coll">
+                <div class="overall-grade">
+                    <div class="title-grade">
+                        Overall Score:
+                    </div>
+                    <div class="actual-grade">
+                        {{diffval}}
+                    </div>
+                </div>
+                <div class="average-gpa">
+                    <div class="title-gpa">
+                        Average GPA:
+                    </div>
+                    <div class="actual-gpa">
+                        {{avgGPA}}
+                    </div>
+                </div>
+            </div>
+            <div class="coll">
+                <div class = "row"> 
+                    <div class="overall-credit-hours">
+                        <div class="title-credit-hours">
+                            Credit Hours:
+                        </div>
+                        <div class="actual-credit-hours">
+                            {{credits}}
+                        </div>
+                    </div>
+                    <div class="overall-description">
+                        <div class="title-description">
+                            Overall Description:
+                        </div>
+                        <div class="actual-description">
+                            {{v}}
+                        </div>
+                    </div>
+                </div>
+                <div class="overall-professors">
+                    <button type="button" class="title-overall-professors">Professors That Teach This Class</button>
+                    <div class="content">
+                            <table class="background-overall-prof">
+                                    <tr>
+                                        <th class="overall-prof-h">Professor Name:</th>
+                                        <th class="overall-prof-h">Average GPA:</th>
+                                        <th class="overall-prof-h">Sentiment Rating:</th>
+                                        <th class="overall-prof-h">Score:</th>
+                                    </tr>
+                                    <tr>
+                                        <th class="overall-prof-h">{{b0}}</th>
+                                        <td class="overall-prof-d">{{g0}}</td>
+                                        <td class="overall-prof-d">{{r0}}</td>
+                                        <td class="overall-prof-d">{{s0}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="overall-prof-h">{{b1}}</th>
+                                        <td class="overall-prof-d">{{g1}}</td>
+                                        <td class="overall-prof-d">{{r1}}</td>
+                                        <td class="overall-prof-d">{{s1}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="overall-prof-h">{{b2}}</th>
+                                        <td class="overall-prof-d">{{g2}}</td>
+                                        <td class="overall-prof-d">{{r2}}</td>
+                                        <td class="overall-prof-d">{{s2}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="overall-prof-h">{{b3}}</th>
+                                        <td class="overall-prof-d">{{g3}}</td>
+                                        <td class="overall-prof-d">{{r3}}</td>
+                                        <td class="overall-prof-d">{{s3}}</td>
+                                    </tr>
+                            </table>
+                    </div>
+                </div>
+                <div class="overall-grade-distribution">
+                        <button type="button" class="title-grade-distribution">Grade Distribution</button>
+                        <div class="content">
+                                <table class="background-grade-distribution">
+                                        <tr>
+                                            <th class="overall-grade-f">Professor Name:</th>
+                                            <th class="overall-grade-f">A (%):</th>
+                                            <th class="overall-grade-f">B (%):</th>
+                                            <th class="overall-grade-f">C (%):</th>
+                                            <th class="overall-grade-f">D (%):</th>
+                                            <th class="overall-grade-f">F (%):</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="overall-grade-f">Prof1</td>
+                                            <td class="overall-grade-d">Smith</td>
+                                            <td class="overall-grade-d">50</td>
+                                            <td class="overall-grade-d">50</td>
+                                            <td class="overall-grade-d">94</td>
+                                            <td class="overall-grade-d">94</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="overall-grade-f">Prof2</td>
+                                            <td class="overall-grade-d">Jackson</td>
+                                            <td class="overall-grade-d">94</td>
+                                            <td class="overall-grade-d">94</td>
+                                            <td class="overall-grade-d">94</td>
+                                            <td class="overall-grade-d">94</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="overall-grade-f">Prof3</td>
+                                            <td class="overall-grade-d">Jackson</td>
+                                            <td class="overall-grade-d">94</td>
+                                            <td class="overall-grade-d">94</td>
+                                            <td class="overall-grade-d">94</td>
+                                            <td class="overall-grade-d">94</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="overall-grade-f">Prof4</td>
+                                            <td class="overall-grade-d">Jackson</td>
+                                            <td class="overall-grade-d">94</td>
+                                            <td class="overall-grade-d">94</td>
+                                            <td class="overall-grade-d">95r</td>
+                                            <td class="overall-grade-d">94</td>
+                                        </tr>
+                                </table>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            var coll = document.getElementsByClassName("title-overall-professors");
+            var coll2 = document.getElementsByClassName("title-grade-distribution");
+            var i;
+            for (i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight){
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                } 
+                });
+            }
+            for (i = 0; i < coll2.length; i++) {
+                coll2[i].addEventListener("click", function() {
+                this.classList.toggle("active2");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight){
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                } 
+                });
+            }
+        </script>
+    </body>
+</html>

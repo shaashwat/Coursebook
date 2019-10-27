@@ -28,7 +28,7 @@ def getCourseInfo(course):
     x = data.set_index("ID").T.to_dict('list')
     try:
         coursedata = x[course]
-        return coursedata[0]+", which is "+ coursedata[1]+" credit hours."
+        return coursedata[0], coursedata[1]
     except:
         return "Course " + course + " doesn't exist. "
 

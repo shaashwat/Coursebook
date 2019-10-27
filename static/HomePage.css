@@ -1,0 +1,113 @@
+.grid-logo {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 10px;
+    align-items: flex-end;
+}
+.grid-name {
+    color: #7B7A74;
+    font-size: 65px;
+    font-family: 'Open Sans', sans-serif;
+}
+.grid-by {
+    color: #66B6D9;
+    font-size: 30px;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 10px;
+}
+.wrapper {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.box1 {
+    background-color:#5D67DB;
+    height: 630px;
+    margin-left: 10px;
+    margin-right: 60px;
+    border-radius: 30px;
+    display: flex;
+}
+.about-info {
+    color: white;
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    margin-left: 10px;
+    margin-right: 10px;
+    word-wrap: break-word;
+}
+.searchtag {
+    margin-top: 150px;
+    color: #A4E0B8;
+    font-size: 55px;
+    font-family: 'Open Sans', sans-serif;
+    margin-left: 30px;
+}
+.searchbar {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 30px;
+}
+input[type=text] {
+    width: 225px;
+    height: 75px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 40px;
+    font-size: 25px;
+    background-color: white;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+  }
+  
+input[type=text]:focus {
+    width: 95%;
+}
+.box2 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    align-self: center;
+    align-items: center;
+}
+.what-it-does {
+    text-align: center;
+    color: #7B7A74;
+    font-size: 65px;
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: underline;
+    background: none;
+    border: none;
+    width: 70%;
+    margin-bottom: 10px;
+    animation: fadeEffect 1s;
+}
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+.grow:hover
+{
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+}
+.tabcontent {
+    animation: fadeEffect 1s;
+}
+.opening{
+    animation: openingtrans 0.75s;
+}
+@keyframes openingtrans {
+    from {
+        opacity: 0;
+        transform: rotateX(-10deg);
+    }
+    to {
+        opacity: 1;
+        transform: rotateX(0);
+    }
+}

@@ -1,0 +1,84 @@
+<html lang="en">
+    <head>
+        <link rel="stylesheet" type="text/css" href="/static/HomePage.css">
+        <meta charset="UTF-8">
+    </head>
+    <header>
+        <div class="grid-logo">
+            <div class="grid-name">
+                CourseBook
+            </div>
+            <div class="grid-by"> 
+                    created by SPAM
+            </div>
+        </div>
+    </header>
+    <body style="background-color:#DADEF7" class="opening">
+        <div class="wrapper">
+            <div class="box box1">
+                <div id="Search" class="tabcontent">
+                    <form method="POST" action="" style= text-align:center;>
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <div class = "searchtag">
+                        Search for a course:
+                        </div>
+                        <input class="searchbar" type="text" name="course" 
+                            placeholder="...like CS 1331 and find info about it">
+                    </form>
+                </div>
+                <div id="Does" class="tabcontent">
+                    <h3 class ="searchtag">What it Does</h3>
+                    <p class="about-info">One can search for a course and find relevant information about the course such as the average GPA, teachers, credit hours, and an overall score based on the information we aggregated online.</p> 
+                </div>
+                <div id="Inspiration" class="tabcontent">
+                    <h3 class ="searchtag">Our Inspiration</h3>
+                    <p class="about-info">Course scheduling is always an extremely stressful time. There is a lot that goes into selecting a course. What is the difficulty of the course? When is it offered? How many professors teach the course? How are the professors that teach the course? Do other students recommend the course? Students often have to compile information from several different sources just to find out enough information about a single course, and this can be extremely exhausting considering that students often take 5-6 courses every semester. Since we four have personally experienced this stress, and with Spring 2020 course scheduling coming up, we wanted to take the initiative to create a program that neatly compiles and presents all of this information for every course offered at Georgia Tech.</p>
+                </div>
+                <div id="Tech" class="tabcontent">
+                    <h3 class ="searchtag">Our Tech</h3>
+                    <p class="about-info">We used several different forms of technology in this project. All of our back-end “pure programming” was done in Python. We used TensorFlow to create a neural-network and perform sentiment analysis/Natural Language Processing. We used Jango to host the overall project in the form of a web application. We used General Web Scraping tools such as XML and requests to actually compile all of our data, and we used Adobe XD for all of the front-end work (UI development).</p>
+                </div>
+                
+            </div>
+            <div class="box box2">
+                <button button class="what-it-does" onclick="openCity(event, 'Search')" id="defaultOpen">
+                    <div class="grow">
+                        search for a course
+                    </div>
+                </button>
+                <button button class="what-it-does" onclick="openCity(event, 'Does')">
+                    <div class="grow">
+                        what it does
+                    </div>
+                </button>
+                <button button class="what-it-does" onclick="openCity(event, 'Inspiration')">
+                    <div class="grow">
+                        our inspiration
+                    </div>
+                </button>
+                <button button class="what-it-does" onclick="openCity(event, 'Tech')">
+                    <div class="grow">
+                        our tech
+                    </div>
+                </button>
+            </div>  
+        </div>
+        <script>
+            function openCity(evt, cityName) {
+                var i, tabcontent, tablinks;
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+                document.getElementById(cityName).style.display = "block";
+                evt.currentTarget.className += " active";
+            }
+            document.getElementById("defaultOpen").click();
+        </script>
+    </body>
+</html>
