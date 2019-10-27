@@ -6,4 +6,3 @@ tensorflow
 keras
 numpy
 keras_preprocessing
-__future__
