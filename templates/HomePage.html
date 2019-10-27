@@ -17,18 +17,15 @@
         <div class="wrapper">
             <div class="box box1">
                 <div id="Search" class="tabcontent">
-                    <script>
-                        alert("Course Submitted! Feel free to browse the tabs on the right!");
-                        document.getElementById("p").style.visibility = "visible";
-                    </script>
                     <form method="POST" action="" style= text-align:center;>
                         {% csrf_token %}
                         {{ form.as_p }}
                         <div class = "searchtag">
                         Search for a course:
                         </div>
-                        <input class="searchbar" type="text" name="course" 
+                        <input class="searchbar" type="text" name="course"
                             placeholder="...like CS 1331 and find info about it">
+                        <p class="about-info">{{ p }}</p>
                     </form>
                 </div>
                 <div id="Does" class="tabcontent">

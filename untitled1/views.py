@@ -4,10 +4,20 @@ from untitled1 import critique
 from untitled1 import sarcasm
 from untitled1 import ratemyprof
 from untitled1 import overallscore
+import csv
 def index(request):
     ratemyprof.setupRMP()
     if request.method == "POST":
-        course = request.POST.get("course", None)
+        course = request.POST.get("course", None).upper()
+        courseexists = False
+        with open('C:\\Users\\shaash\\PycharmProjects\\untitled1\\untitled1\\data.csv', 'r') as csvfile:
+            reader = csv.reader(csvfile, delimiter=',', quotechar='|')
+            for row in reader:
+                if (course in row):
+                    courseexists = True
+                    break
+        if not courseexists:
+            return render(request, 'HomePage.html', {'p': "The input isn't valid. Try Again."})
         info = courselist.getCourseInfo(course)
         easyProfGpa = critique.getcoursecritique(course)
         profnames = easyProfGpa[2]
@@ -65,7 +75,7 @@ def index(request):
                                               })
 
     elif request.method == "GET":
-        return render(request, 'HomePage.html')
+        return render(request, 'HomePage.html', {'p': ""})
 
 
 
