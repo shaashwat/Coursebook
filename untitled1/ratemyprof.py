@@ -8,7 +8,6 @@ from .rmp.RMPClass import RateMyProfScraper
 
 #cwd = os.getcwd()
 GeorgiaTech = RateMyProfScraper(361)
-print('setup complete')
 def setupRMP():
     print('reached')
     return None

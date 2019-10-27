@@ -27,12 +27,12 @@ def getcoursecritique(course):
     prof_score = []
     for i in range(len(prof_names)):
         prof_gpa.append(float(master[(i) * 8 + 1]))
-        prof_a.append(float(master[(i) * 8 + 2]))
-        prof_b.append(float(master[(i) * 8 + 3]))
-        prof_c.append(float(master[(i) * 8 + 4]))
-        prof_d.append(float(master[(i) * 8 + 5]))
-        prof_f.append(float(master[(i) * 8 + 6]))
-        prof_w.append(float(master[(i) * 8 + 7]))
+        prof_a.append(int(master[(i) * 8 + 2]))
+        prof_b.append(int(master[(i) * 8 + 3]))
+        prof_c.append(int(master[(i) * 8 + 4]))
+        prof_d.append(int(master[(i) * 8 + 5]))
+        prof_f.append(int(master[(i) * 8 + 6]))
+        prof_w.append(int(master[(i) * 8 + 7]))
         exists_on_rmp.append(ratemyprof.exists(prof_names[i]))
         sentiment = getAverageSentiment(prof_names[i])
         if sentiment < 0:
@@ -66,7 +66,7 @@ def getcoursecritique(course):
             proflist.append("")
 
     gpalist = list(gpas.keys())
+    gradedist = [prof_a, prof_b, prof_c, prof_d, prof_f, prof_w]
 
 
-
-    return (" " + formatted_name + " is the professor who's class had the highest average GPA, which was " + str(next(iter(gpas)))), profname, proflist[0:4], gpalist[0:4], scorelist[0:4], sum(gpalist)/len(gpalist)
+    return (" " + formatted_name + " is the professor who's class had the highest average GPA, which was " + str(next(iter(gpas)))), profname, proflist[0:4], gpalist[0:4], scorelist[0:4], sum(gpalist)/len(gpalist), gradedist

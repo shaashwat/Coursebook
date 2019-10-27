@@ -19,7 +19,7 @@
     color: #7B7A74;
     font-size: 65px;
     font-family: 'Open Sans', sans-serif;
-    margin-left: 30px;
+    margin-left: 15px;
     text-decoration: underline;
     font-weight: bold;
 }
@@ -171,7 +171,7 @@
     width: 1075px;
     height: 80px;
     margin-top: 45px;
-    text-align: left;
+    text-align: center;
     outline: none;
     font-size: 40px;
     padding: 18px;
@@ -186,6 +186,7 @@
     font-weight: bold;
     float: right;
     margin-left: 5px;
+    text-align: center;
 }
 .active {
     border-radius: 25px 25px 0px 0px;
@@ -237,7 +238,7 @@ tr {
     width: 1075px;
     height: 80px;
     margin-top: 20px;
-    text-align: left;
+    text-align: center;
     outline: none;
     font-size: 40px;
     padding: 18px;
@@ -252,6 +253,7 @@ tr {
     font-weight: bold;
     float: right;
     margin-left: 5px;
+    text-align: center;
 }
 .active2 {
     border-radius: 25px 25px 0px 0px;
