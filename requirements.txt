@@ -178,7 +178,7 @@ tensorflow-estimator==2.0.1
 tensorflow-metadata==0.15.0
 termcolor==1.1.0
 tqdm==4.36.1
-urllib3==1.25.6
+urllib3==1.25.8
 vsts==0.1.25
 vsts-cd-manager==1.0.2
 websocket-client==0.56.0
