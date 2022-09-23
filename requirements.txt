@@ -149,7 +149,7 @@ paramiko==2.6.0
 pbr==5.4.3
 portalocker==1.5.1
 promise==2.2.1
-protobuf==3.10.0
+protobuf==3.18.3
 psutil==5.6.3
 pycparser==2.19
 pydocumentdb==2.3.5
